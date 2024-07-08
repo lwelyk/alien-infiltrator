@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://addons/egoventure/nodes/four_side_room.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/egoventure/nodes/hotspots/walk_hotspot.gd" type="Script" id=2]
@@ -6,8 +6,15 @@
 [ext_resource path="res://images/apartment/tv-stand.png" type="Texture" id=4]
 [ext_resource path="res://images/apartment/front-door.png" type="Texture" id=5]
 [ext_resource path="res://images/apartment/windows.png" type="Texture" id=6]
+[ext_resource path="res://sounds/misc/testing_effects.ogg" type="AudioStream" id=7]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/hotspot.gd" type="Script" id=8]
+[ext_resource path="res://scenes/apartment.gd" type="Script" id=9]
+[ext_resource path="res://inventory/picture_normal.png" type="Texture" id=10]
+[ext_resource path="res://inventory/picture.tres" type="Resource" id=11]
+[ext_resource path="res://addons/egoventure/nodes/hotspots/trigger_hotspot.gd" type="Script" id=12]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="Room" parent="." instance=ExtResource( 1 )]
 front_texture = ExtResource( 5 )
@@ -25,3 +32,37 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+target_scene = "res://scenes/hallway.tscn"
+effect = ExtResource( 7 )
+
+[node name="Hotspot" type="TextureButton" parent="."]
+margin_left = 3302.09
+margin_top = 447.955
+margin_right = 3405.09
+margin_bottom = 547.955
+mouse_default_cursor_shape = 13
+texture_normal = ExtResource( 10 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 12
+target_view = "right"
+visibility_state = "hot_picture"
+
+[node name="TriggerHotspot" type="TextureButton" parent="."]
+margin_left = 3258.0
+margin_top = 374.0
+margin_right = 3641.0
+margin_bottom = 1185.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+visibility_state = "hot_picture_return"
+valid_inventory_items = [ ExtResource( 11 ) ]
+
+[connection signal="activate" from="Hotspot" to="." method="_on_Hotspot_activate"]
+[connection signal="item_used" from="TriggerHotspot" to="." method="_on_TriggerHotspot_item_used"]
