@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/egoventure/nodes/hotspots/hotspot.gd" type="Script" id=1]
+[ext_resource path="res://inventory/picture_scene.png" type="Texture" id=2]
+[ext_resource path="res://inventory/picture.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1284.61, 725.298 )
+texture = ExtResource( 2 )
+
+[node name="hot_man" type="TextureButton" parent="."]
+margin_left = 1765.41
+margin_top = 1204.48
+margin_right = 1994.41
+margin_bottom = 1304.48
+mouse_default_cursor_shape = 13
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 12
+visibility_state = "hot_word_man"
+
+[node name="hot_woman" type="TextureButton" parent="."]
+margin_left = 838.772
+margin_top = 1273.4
+margin_right = 1262.77
+margin_bottom = 1373.4
+mouse_default_cursor_shape = 13
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 12
+visibility_state = "hot_word_woman"
+
+[node name="hot_child" type="TextureButton" parent="."]
+margin_left = 1330.59
+margin_top = 1282.52
+margin_right = 1661.59
+margin_bottom = 1391.52
+mouse_default_cursor_shape = 13
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 12
+visibility_state = "hot_word_child"
+
+[node name="Hotspot4" type="TextureButton" parent="."]
+margin_left = 1806.96
+margin_top = 77.912
+margin_right = 1972.96
+margin_bottom = 255.912
+mouse_default_cursor_shape = 11
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 10
+
+[node name="Hotspot5" type="TextureButton" parent="."]
+margin_left = 2020.0
+margin_top = 15.0
+margin_right = 2561.0
+margin_bottom = 1440.0
+mouse_default_cursor_shape = 11
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 10
+
+[node name="Hotspot6" type="TextureButton" parent="."]
+margin_left = 15.2654
+margin_top = 6.01013
+margin_right = 556.265
+margin_bottom = 1431.01
+mouse_default_cursor_shape = 11
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+cursor_type = 10
+
+[connection signal="activate" from="hot_man" to="." method="_on_hot_man_activate"]
+[connection signal="activate" from="hot_woman" to="." method="_on_hot_woman_activate"]
+[connection signal="activate" from="hot_child" to="." method="_on_hot_child_activate"]
+[connection signal="activate" from="Hotspot4" to="." method="_on_Hotspot4_activate"]
+[connection signal="activate" from="Hotspot5" to="." method="_on_Hotspot4_activate"]
+[connection signal="activate" from="Hotspot6" to="." method="_on_Hotspot4_activate"]

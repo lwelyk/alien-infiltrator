@@ -43,9 +43,6 @@ margin_bottom = 547.955
 mouse_default_cursor_shape = 13
 texture_normal = ExtResource( 10 )
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 cursor_type = 12
 target_view = "right"
 visibility_state = "hot_picture"

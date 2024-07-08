@@ -120,6 +120,15 @@ extra_spacing_top = 10
 extra_spacing_bottom = 10
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=27]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 10
+extra_spacing_bottom = 10
+font_data = ExtResource( 1 )
+
 [sub_resource type="DynamicFont" id=25]
 size = 48
 outline_size = 2
@@ -131,15 +140,6 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=26]
 bg_color = Color( 0.156863, 0.00784314, 0.00784314, 1 )
-
-[sub_resource type="DynamicFont" id=27]
-size = 48
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-use_filter = true
-extra_spacing_top = 10
-extra_spacing_bottom = 10
-font_data = ExtResource( 1 )
 
 [resource]
 default_font = SubResource( 27 )
@@ -189,7 +189,7 @@ RichTextLabel/colors/dialog_hotspot_asked_font_color = Color( 0.439216, 0.439216
 RichTextLabel/colors/dialog_hotspot_font_color = Color( 0, 0, 0, 1 )
 RichTextLabel/colors/dialog_hotspot_hover_font_color = Color( 0.133333, 0.470588, 0.490196, 1 )
 RichTextLabel/fonts/dialog_font = SubResource( 24 )
-RichTextLabel/fonts/dialog_hotspot_bold_font = null
+RichTextLabel/fonts/dialog_hotspot_bold_font = SubResource( 27 )
 RichTextLabel/fonts/dialog_hotspot_normal_font = SubResource( 25 )
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null

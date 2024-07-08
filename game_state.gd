@@ -8,5 +8,9 @@ extends BaseState
 export (bool) var hot_picture = true
 export (bool) var hot_picture_return = false
 
+export (bool) var hot_word_woman = true
+export (bool) var hot_word_man = true
+export (bool) var hot_word_child = true
+
 ## The player has taken the keys
 #export(bool) var has_keys = false

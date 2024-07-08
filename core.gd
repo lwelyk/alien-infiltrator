@@ -20,8 +20,27 @@ func _ready():
 # - item1: First item
 # - item2: Second item
 func _on_triggered_inventory_item(item1: InventoryItem, item2: InventoryItem):
-	pass
+	# Husband and Wife
+	if _check_both_items(item1.title, item2.title, ['Man', 'Father', 'Husband']) and  _check_both_items(item1.title, item2.title, ['Woman', 'Mother', 'Wife']):
+		Inventory.add_item(preload('res://inventory/word_husband.tres'))
+		Inventory.add_item(preload('res://inventory/word_wife.tres'))
+	# Mother, Son, Daughter
+	if _check_both_items(item1.title, item2.title, ['Child', 'Son', 'Daughter']) and  _check_both_items(item1.title, item2.title, ['Woman', 'Mother', 'Wife']):
+		Inventory.add_item(preload('res://inventory/word_son.tres'))
+		Inventory.add_item(preload('res://inventory/word_daughter.tres'))
+		Inventory.add_item(preload('res://inventory/word_mother.tres'))
+	# Father, Son, Daughter
+	if _check_both_items(item1.title, item2.title, ['Man', 'Father', 'Husband']) and  _check_both_items(item1.title, item2.title, ['Child', 'Son', 'Daughter']):
+		Inventory.add_item(preload('res://inventory/word_son.tres'))
+		Inventory.add_item(preload('res://inventory/word_daughter.tres'))
+		Inventory.add_item(preload('res://inventory/word_father.tres'))
+		
 
+func _check_both_items(title1: String, title2: String, valid_list: Array):
+	if title1 in valid_list or title2 in valid_list:
+		return true
+	else:
+		return false
 
 # Triggered when a new game is started.
 func _on_new_game():

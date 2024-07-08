@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=9 format=2]
+
+[ext_resource path="res://addons/egoventure/resources/inventory_item.gd" type="Script" id=1]
+[ext_resource path="res://inventory/man_word_normal.png" type="Texture" id=2]
+[ext_resource path="res://inventory/word_man_normal.png" type="Texture" id=3]
+[ext_resource path="res://inventory/word_man_big.png" type="Texture" id=4]
+[ext_resource path="res://inventory/word_woman.tres" type="Resource" id=5]
+[ext_resource path="res://inventory/word_child.tres" type="Resource" id=6]
+[ext_resource path="res://inventory/word_daughter.tres" type="Resource" id=7]
+[ext_resource path="res://inventory/word_son.tres" type="Resource" id=8]
+
+[resource]
+resource_name = "Man"
+script = ExtResource( 1 )
+title = "Man"
+description = "The male of the species."
+image_normal = ExtResource( 3 )
+image_active = ExtResource( 2 )
+image_big = ExtResource( 4 )
+combineable_with = [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ) ]
+detail_scene = ""
+detail_show_mouse = false
+grabbable = true
